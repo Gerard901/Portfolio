@@ -5,6 +5,8 @@ body {
     ),
     url(../img/bg.jpg);
   font-family: "Montserrat", sans-serif;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 :root {
@@ -305,13 +307,11 @@ img {
   .message-bar {
     width: 20% !important;
   }
-}
-
-@media (max-width: 575px) {
-  .photo {
-    margin-bottom: 0.5rem;
-    display: block;
-    width: 130px;
+  .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
   }
   .personal-info {
     border: none;
@@ -326,12 +326,7 @@ img {
   .menu-item i {
     font-size: 2rem;
   }
-  .menu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-  }
+
   .active {
     border-radius: 0;
   }
@@ -344,5 +339,20 @@ img {
   }
   .empty {
     display: block;
+  }
+  .list-contact {
+    border: none;
+    padding-left: 0;
+  }
+  body {
+    background: var(--color-prime);
+  }
+}
+
+@media (max-width: 575px) {
+  .photo {
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 130px;
   }
 }
